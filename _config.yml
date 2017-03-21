@@ -1,0 +1,13 @@
+title: Fabian Schilling
+email: ""
+tagline: ""
+baseurl: ""
+url: "http://fabianschilling.github.io"
+paginate: 1
+github_username: fabianschilling
+
+gems:
+  - jekyll-paginate
+
+markdown: kramdown
+permalink: pretty
