@@ -11,3 +11,5 @@ gems:
 
 markdown: kramdown
 permalink: pretty
+
+google_analytics: UA-96749476-1

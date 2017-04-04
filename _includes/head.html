@@ -2,7 +2,6 @@
   <title>{{ site.title }}</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#157878">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/normalize.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/cayman.css">
@@ -13,4 +12,7 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2b5797">
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
 </head>
