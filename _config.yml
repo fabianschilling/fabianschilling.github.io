@@ -6,7 +6,7 @@ url: "http://fabianschilling.github.io"
 paginate: 1
 github_username: fabianschilling
 
-gems:
+plugins:
   - jekyll-paginate
 
 markdown: kramdown
