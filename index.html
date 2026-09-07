@@ -1,4 +1,147 @@
----
-layout: default
-title: {{ site.name }}
----
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fabian Schilling</title>
+  <meta name="description" content="Fabian Schilling is a senior research scientist working on robot perception and learning.">
+  <meta name="author" content="Fabian Schilling">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2b5797">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+  <meta name="cf-2fa-verify" content="1af1db846dc2f7e">
+  <meta name="cf-2fa-verify" content="43618e26f472473">
+</head>
+
+<body>
+  <main>
+
+    <header>
+      <a class="home-link" href="./" tabindex="-1" aria-hidden="true">
+        <img class="avatar" src="assets/images/fabianschilling.jpg" width="220" height="220" alt="Portrait of Fabian Schilling">
+      </a>
+      <h1><a class="home-link" href="./">Fabian Schilling</a></h1>
+      <p class="tagline">I make robots see 🤖👁️</p>
+      <p class="summary">Senior robotics researcher with 10+ years of experience in perception and learning, from research to deployment.</p>
+      <p class="location">Based in Zurich, Switzerland&nbsp;🇨🇭</p>
+
+      <nav class="links" aria-label="Elsewhere">
+        <a class="email" href="mailto:fabian+web@schilli.ng">Email</a>
+        <a class="github" href="https://github.com/fabianschilling">GitHub</a>
+        <a class="linkedin" href="https://www.linkedin.com/in/fabianschilling/">LinkedIn</a>
+        <a class="scholar" href="https://scholar.google.com/citations?user=0gmSIsoAAAAJ">Scholar</a>
+      </nav>
+    </header>
+
+    <hr>
+
+    <section class="timeline" aria-label="Career">
+
+      <article class="entry">
+        <a class="logo-link" href="https://ai.sony/" tabindex="-1" aria-hidden="true">
+          <span class="logo sony"></span>
+        </a>
+        <div>
+          <h2>Senior Research Scientist  &middot; <a href="https://ai.sony/">Sony AI</a> / <a href="https://research.sony">Sony Research</a></h2>
+          <p class="meta">2022 &ndash; 2026 &middot; Zurich, Switzerland&nbsp;🇨🇭 / Tokyo, Japan&nbsp;🇯🇵</p>
+          <p>
+            We built <i>Ace</i>, the first autonomous robot to outplay professional table tennis players (<a class="cite" href="https://doi.org/10.1038/s41586-026-10338-5">Dürr et al., <em>Nature</em>, 2026</a>).
+            I co-developed the perception system that lets <i>Ace</i> visually measure the spin of an unmodified ball during gameplay (<a class="cite" href="https://arxiv.org/abs/2606.26780">Hu<small>*</small>, Schilling<small>*</small>, Cavinato<small>*</small> et al., <em>ECCV</em>, 2026</a>; <small>*</small>equal contribution).
+            Event cameras capture the ball's rotation, while galvanometer-steered mirrors keep it centered in view and a liquid lens keeps it in focus.
+            Our spin estimator achieves offline errors of 1.2%&nbsp;in magnitude and 1.5°&nbsp;in axis, with real-time estimates staying within 8.8%&nbsp;and 6.4° of the offline results at 750&nbsp;Hz with 3&nbsp;ms of latency.
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <a class="logo-link" href="https://www.epfl.ch" tabindex="-1" aria-hidden="true">
+          <img class="logo" src="assets/logos/epfl.svg" alt="" loading="lazy">
+        </a>
+        <div>
+          <h2>Ph.D. in Robotics  &middot; <a href="https://www.epfl.ch/labs/lis/">Laboratory of Intelligent Systems</a> at <a href="https://www.epfl.ch">EPFL</a></h2>
+          <p class="meta">2017 &ndash; 2022 &middot; Lausanne, Switzerland&nbsp;🇨🇭</p>
+          <p>
+            I developed the first drone swarm that flies in close formation using nothing but onboard cameras, with no radio link, no GPS, and no markers on the drones.
+            I approached the problem in two ways: designing modular perception and control pipelines (<a class="cite" href="https://doi.org/10.1109/LRA.2021.3062298">Schilling et al., <em>RA-L</em>, 2021</a>) and training end-to-end control policies through imitation learning (<a class="cite" href="https://doi.org/10.1109/LRA.2019.2935377">Schilling et al., <em>RA-L</em>, 2019</a>).
+            I studied how these swarms scale as more drones join and occlude each other (<a class="cite" href="https://doi.org/10.1109/ACCESS.2022.3158758">Schilling et al., <em>IEEE Access</em>, 2022</a>).
+            Alongside this research, I supervised students and interns on projects including a simulated dataset for visual-inertial odometry in dynamic scenes, nominated for the Best Paper Award in Robot Vision at ICRA (<a class="cite" href="https://doi.org/10.1109/LRA.2021.3058073">Minoda, Schilling et al., <em>RA-L</em>, 2021</a>).
+            I also taught Master-level courses on aerial robotics and motion capture systems as a teaching assistant.
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <a class="logo-link" href="https://www.kth.se/" tabindex="-1" aria-hidden="true">
+          <img class="logo" src="assets/logos/kth.png" alt="" loading="lazy">
+        </a>
+        <div>
+          <h2>Research Engineer &middot; <a href="https://www.kth.se/rpl">Robotics, Perception, and Learning Lab</a> at <a href="https://www.kth.se/">KTH</a></h2>
+          <p class="meta">2016 &ndash; 2017 &middot; Stockholm, Sweden&nbsp;🇸🇪</p>
+          <p>
+            I taught a wheeled robot to read the ground in front of it, combining camera and lidar into a terrain classifier that transferred to environments it had never seen (<a class="cite" href="https://doi.org/10.1109/IROS.2017.8206092">Schilling et al., <em>IROS</em>, 2017</a>).
+            The classifier ran inside the robot's navigation stack so it could route around terrain it could not cross.
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <a class="logo-link" href="https://www.kth.se/" tabindex="-1" aria-hidden="true">
+          <img class="logo" src="assets/logos/kth.png" alt="" loading="lazy">
+        </a>
+        <div>
+          <h2>M.Sc. in Computer Science &middot; <a href="https://www.kth.se/en">KTH Royal Institute of Technology</a></h2>
+          <p class="meta">2014 &ndash; 2017 &middot; Stockholm, Sweden&nbsp;🇸🇪</p>
+          <p>
+            I specialized in autonomous systems: robotics, machine learning, and computer vision.
+            My thesis studied how batch normalization affects the training of deep convolutional neural networks (<a class="cite" href="https://www.diva-portal.org/smash/get/diva2%3A955562/FULLTEXT01.pdf">Schilling, <em>M.Sc. thesis</em>, 2016</a>).
+            I also taught a Master-level AI course as a teaching assistant.
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <a class="logo-link" href="https://www.ucsb.edu/" tabindex="-1" aria-hidden="true">
+          <img class="logo" src="assets/logos/ucsb.svg" alt="" loading="lazy">
+        </a>
+        <div>
+          <h2>Exchange Year &middot; <a href="https://www.ucsb.edu/">University of California, Santa Barbara</a></h2>
+          <p class="meta">2012 &ndash; 2013 &middot; Santa Barbara, California&nbsp;🇺🇸</p>
+          <p>
+            A self-organized year abroad, funded by two scholarships.
+            I took my first courses in computer vision and augmented reality here, and have been working on making machines see ever since.
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <a class="logo-link" href="https://www.lmu.de/en/" tabindex="-1" aria-hidden="true">
+          <img class="logo" src="assets/logos/lmu-mark.svg" alt="" loading="lazy">
+        </a>
+        <div>
+          <h2>B.Sc. in Computer Science &middot; <a href="https://www.lmu.de/en/">LMU Munich</a></h2>
+          <p class="meta">2010 &ndash; 2014 &middot; Munich, Germany&nbsp;🇩🇪</p>
+          <p>
+            I focused on mobile and distributed systems.
+            As a consultant with the junior enterprise Academy Consult, I led a project focused on public relations for TU Munich.
+            I also co-founded a startup designing websites and corporate identities for small businesses.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <hr>
+
+  </main>
+</body>
+
+</html>
