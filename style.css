@@ -1,0 +1,282 @@
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #6b6b6b;
+  --rule: #e5e5e5;
+  --link: #0645ad;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a1a;
+    --fg: #e8e6e3;
+    --muted: #9a9a9a;
+    --rule: #333333;
+    --link: #7aa8ff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+/* Header */
+
+header {
+  text-align: center;
+}
+
+.home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Block-level, so the portrait is not sitting on a text baseline: as an
+   inline-block it picked up the line box's descender space beneath it. */
+header > .home-link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.home-link:hover {
+  opacity: 0.75;
+}
+
+.avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  margin: 1.25rem 0 0.4rem;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.summary {
+  max-width: 34rem;
+  margin: 1.1rem auto 0.9rem;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.location {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.links a:hover {
+  color: var(--fg);
+}
+
+/* The icon is decorative: the link text already names the destination. */
+.links a::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  flex: none;
+  background: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}
+
+.links .email {
+  --icon: url("assets/icons/email.svg");
+}
+
+.links .github {
+  --icon: url("assets/icons/github.svg");
+}
+
+.links .linkedin {
+  --icon: url("assets/icons/linkedin.svg");
+}
+
+.links .scholar {
+  --icon: url("assets/icons/scholar.svg");
+}
+
+/* Timeline */
+
+.entry {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+/* Keeps the text color, so the masked Sony wordmark below does not pick up
+   the link color from its wrapping anchor. */
+.logo-link {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.logo-link:hover {
+  opacity: 0.65;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  object-fit: contain;
+}
+
+/* Tinted rather than loaded as an image, so the monochrome Sony wordmark
+   follows the text color instead of needing a light and a dark copy. */
+.logo.sony {
+  background: currentColor;
+  -webkit-mask: url("assets/logos/sony.svg") center / contain no-repeat;
+  mask: url("assets/logos/sony.svg") center / contain no-repeat;
+}
+
+.entry h2 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 0.15rem 0 0;
+  line-height: 1.4;
+}
+
+.entry h2 a {
+  color: inherit;
+  text-decoration-color: var(--rule);
+}
+
+.entry h2 a:hover {
+  color: var(--link);
+}
+
+.meta {
+  margin: 0.15rem 0 0.6rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.entry p:last-child {
+  margin: 0;
+}
+
+/* Description links are quiet enough to read past, but clear on hover. */
+.entry p a {
+  color: var(--muted);
+  text-decoration-color: var(--rule);
+}
+
+.entry p a:hover {
+  color: var(--link);
+  text-decoration-color: currentColor;
+}
+
+/* Footer */
+
+footer {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Narrow screens */
+
+@media (max-width: 30rem) {
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .avatar {
+    width: 160px;
+    height: 160px;
+  }
+
+  .entry {
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .logo {
+    height: 2.25rem;
+  }
+}
